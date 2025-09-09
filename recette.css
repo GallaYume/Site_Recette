@@ -1,0 +1,153 @@
+            *
+            {
+                overflow: auto; /* if we hadn't put this, if the second column ( or anything for that matter) was overflowing from his container, nothing would be done. Thanks to the *, we say to every single CSS part that if they overflow, they need to stretch their container to not overflow anymore */
+            }
+            
+            
+            body{
+                background-color:#8BA1BB ;
+                font-family: Arial;
+                margin: 0;
+            }
+
+            p.categorie {
+                background-color: #000000;
+                color: white;
+                display: inline-block;
+                padding: 8px 18px;
+                margin: 0;
+                margin-top: -20px;
+                font-weight: bold;
+                font-size: 16px;
+
+            }
+            div.categorie {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                overflow: visible;
+            }
+            div.Contenu{
+                background-color: white;
+                margin: 80px 10% 0px 10%; /*this goes up right down left*/
+                padding: 0px 30px 0px 30px;
+                min-width: 360px;
+                box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+                overflow: visible;
+
+            }
+            h1{
+                text-align: center;
+                margin-bottom: 16px;
+                margin-top: 10px;
+            }
+            p.Description{
+                text-align: center;
+                max-width: 400px;
+                display: inline-block;
+                font-size: 14px;
+            }
+            .centre
+            {
+                text-align: center;
+                width: 100%;
+            }
+            div.séparateur
+            {
+                height: 1px;
+                width: 150px;
+                background-color: #000000;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            table.info
+            {
+                position: absolute; 
+                bottom: 0; 
+                width: 100%; 
+                color: white; 
+                background-color: #6C829DC0; 
+                height: 80px;
+                min-width: 360px;
+            }
+            div.info
+            {
+                position: relative;
+            }
+            table.info td
+            {
+                text-align: center;
+                font-size: 15px;
+                vertical-align: top;
+            }
+            table.info th
+            {
+                font-size: 16px;
+                vertical-align: bottom;
+                padding-bottom: 8px;
+            }
+            img.info
+            {
+                display: block;
+                max-height: 400px;
+                object-fit: cover;
+                min-height: 200px;
+                background-color: lightgray;
+            }
+            div.colonne
+            {
+                width: 45%;
+            }
+            div.colonne h2
+            {
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 15px;
+                border-bottom: 5px solid #6C829D ;
+                padding-bottom: 5px;
+            }
+            div.Colonne1
+            {
+                display: inline-block;
+                margin-right: 10%;
+            }
+            div.Colonne2
+            {
+                float: right;
+            }
+            div.Line p
+            {
+                border: 2px solid lightgray;
+                text-align: center;
+                padding: 7px 0;
+                margin-top: 3px;
+                margin-bottom: 3px;
+            }
+            table.preparation p.numero
+            {
+                background-color: #6C829D;
+                color: white;
+                text-align: center;
+                width: 25px;
+                height: 25px;
+                font-size: 15px;
+                font-weight: bold;
+                padding-top: 4px;
+                box-sizing: border-box; /* make it so that the padding is not added to the height, but just a part of it*/
+                border-radius: 50%; /* this is to make things round*/
+                margin: 0%;
+
+            }
+            table.preparation td
+            {
+                vertical-align: top;
+            }
+            table.preparation td.preparation_etape
+            {
+                font-size: 14px;
+                padding-left: 10x;
+                padding-bottom: 10px;
+            }
+           table.preparation tr
+            {
+                height: 40px ; /* in table you don't put min height, you can just put height*/
+            }
