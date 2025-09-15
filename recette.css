@@ -28,9 +28,8 @@
             }
             div.Contenu{
                 background-color: white;
-                margin: 80px 10% 0px 10%; /*this goes up right down left*/
-                padding: 0px 30px 0px 30px;
-                min-width: 360px;
+                margin: 40px 8px 40px 8px; /*this goes up right down left*/
+                padding: 0px 8px 0px 8px;
                 box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
                 overflow: visible;
 
@@ -66,8 +65,8 @@
                 width: 100%; 
                 color: white; 
                 background-color: #6C829DC0; 
-                height: 80px;
-                min-width: 360px;
+                height: 50px;
+                min-width: 320px;
             }
             div.info
             {
@@ -76,12 +75,12 @@
             table.info td
             {
                 text-align: center;
-                font-size: 15px;
+                font-size: 12px;
                 vertical-align: top;
             }
             table.info th
             {
-                font-size: 16px;
+                font-size: 14px;
                 vertical-align: bottom;
                 padding-bottom: 8px;
             }
@@ -95,7 +94,8 @@
             }
             div.colonne
             {
-                width: 45%;
+                width: 100%;
+                margin-top: 20px;
             }
             div.colonne h2
             {
@@ -108,12 +108,8 @@
             div.Colonne1
             {
                 display: inline-block;
-                margin-right: 10%;
             }
-            div.Colonne2
-            {
-                float: right;
-            }
+
             div.Line p
             {
                 border: 2px solid lightgray;
@@ -150,4 +146,47 @@
            table.preparation tr
             {
                 height: 40px ; /* in table you don't put min height, you can just put height*/
+            }
+
+            /* style pour ordi*/
+            @media only screen and (min-width: 768px)
+            {
+                div.Contenu{
+                min-width: 360px;
+                margin: 80px 10% 60px 10%; /*this goes up right down left*/
+                padding: 0px 30px 0px 30px;
+                }
+                table.info td
+                {
+                    font-size: 15px;
+                }
+                table.info th
+                {
+                    font-size: 16px;
+                }
+                table.info
+                {
+                    height: 80px;
+                }
+                div.colonne
+                {
+                    width: 45%;
+                }
+                div.Colonne1
+                {
+                    margin-right: 10%;
+                }
+                div.Colonne2
+                {
+                    float: right; /*Float make it so that colonne2 isn't in the document flow and if it has the space, it will put itself next to the element above. The problem with that is that since it's no longer in the doc flow, it can overflow because it's container will not scretch itself. This is why here, since we had to make the contenair show the overflow so we could see "Recette" on top, we had to group colonne 1 and 2 inside a div, so that it is a container again and the container WILL stretch if colonne 2 overflow. ffs */
+                }
+            }
+            @media only screen and (min-width: 900px)
+            {
+                div.Contenu
+                {
+                margin: 80px auto 60px auto; /*this goes up right down left*/
+                width: 645px;
+
+                }
             }
